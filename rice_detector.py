@@ -19,12 +19,12 @@ def classify_grains(image):
     total_count = 0
     for cnt in contours:
         area = cv2.contourArea(cnt)
-        if area < 100:
+        if area < 350:
             continue
         total_count += 1
         x, y, w, h = cv2.boundingRect(cnt)
         aspect_ratio = float(w) / h if h != 0 else 0
-        if h < 40 or aspect_ratio > 0.7:
+        if h < 300 or aspect_ratio > 0.3:
             color = (0, 0, 255)
             broken_count += 1
         else:

@@ -1,12 +1,11 @@
-
 <!doctype html>
 <html>
-<head>
-  <title>Detection Result</title>
-</head>
+<head><title>Result</title></head>
 <body>
-  <h2>Detected Rice Grains</h2>
-  <img src="{{ image }}" alt="Detected Image" width="600">
-  <br><a href="/">Try Another Image</a>
+  <h2>Analysis Result</h2>
+  <p>Broken Rice: {{ broken }}</p>
+  <p>Whole Rice: {{ whole }}</p>
+  <img src="/{{ uploaded_image }}" style="max-width:500px">
+  <br><a href="/">Analyze Another</a>
 </body>
 </html>

@@ -28,7 +28,7 @@ def classify_grains(image):
             color = (0, 0, 255)
             broken_count += 1
         else:
-            color = (0, 255, 0)
+            color = ( 255,0, 0)
         cv2.rectangle(output, (x, y), (x + w, y + h), color, 2)
     return output, total_count, broken_count
 
